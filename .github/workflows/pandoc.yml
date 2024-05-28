@@ -26,9 +26,10 @@ jobs:
         run: ls -al
 
       - name: Generate Pandoc
-        uses: docker://pandoc/latex:2.9
+        uses: docker://pandoc/core:2.9
         with:
-          args: "-s --metadata title='everything of nothing' -f markdown -t html -o index.html *.md"
+          args: "--help"
+          #args: "-s --metadata title='everything of nothing' -f markdown -t html -o index.html *.md"
 #          args: >-
 #            -s
 #            --metadata title='everything of nothing'

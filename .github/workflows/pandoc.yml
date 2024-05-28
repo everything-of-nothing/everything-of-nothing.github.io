@@ -30,4 +30,11 @@ jobs:
     steps:
       - uses: docker://pandoc/latex:2.9
         with:
-          args: "-s --metadata title='everything of nothing' --toc -f markdown -t html -o index.html *.md"
+          args: >-
+            -s 
+            --metadata title='everything of nothing' 
+            --toc 
+            -f markdown 
+            -t html 
+            -o index.html 
+            *.md

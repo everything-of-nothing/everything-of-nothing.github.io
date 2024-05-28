@@ -19,8 +19,14 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: docker://pandoc/latex:2.9
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: List files
+        run: ls -al
+
+      - name: Generate Pandoc
+        uses: docker://pandoc/latex:2.9
         with:
           args: >-
             -s 

@@ -21,6 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: docker://pandoc/core:2.9
+        run: ls -la
         with:
           args: "*.md -o index.html"
           #args: "-s --metadata title='everything of nothing' -f markdown -t html -o index.html *.md"

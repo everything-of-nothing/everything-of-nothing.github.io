@@ -28,7 +28,7 @@ jobs:
       - name: Generate Pandoc
         uses: docker://pandoc/core:2.9
         with:
-          args: "--help"
+          args: "-s -o index.html *.md"
           #args: "-s --metadata title='everything of nothing' -f markdown -t html -o index.html *.md"
 #          args: >-
 #            -s
